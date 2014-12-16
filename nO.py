@@ -11,7 +11,7 @@ catherine: how do i write a program so i can have all the character differences 
 
 import sys
 from itertools import product
-
+import argparse
 
 def scream(word, count=3):
 	word = [(letter.lower(), letter.upper()) for letter in word] #find all pairs of upper/lowercase of letters in the word
@@ -22,6 +22,11 @@ def scream(word, count=3):
 	return many
 
 
-for shout in scream("no"):
-	print(shout)
+if __name__ == '__main__':
+	args = argparse.ArgumentParser(epilog="Scream and shout alllll the times")
+	args.add_argument("word", nargs="?", default='no', help="what word to shout")
+	args.add_argument("count", nargs="?", default=3, type=int, help="and how many times to shout it") 
+	args = args.parse_args()
+	for shout in scream(args.word, args.count):
+		print(shout)
 	
