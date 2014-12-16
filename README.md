@@ -2,7 +2,7 @@ nO
 ==
 
 
-Have you ever wanted an exhaustive list of all that (2**2)**3 = 64 ways to shout "no no no" in ASCII?
+Have you ever wanted an exhaustive list of all the (2^2)^3 = 64 ways to shout "no no no" in ASCII?
 Well now you have it!
 
 ```
